@@ -1,6 +1,7 @@
 <?php
-
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/posts',[ClientController::class,'getAllPost'])->name('posts.getAllpost');
+
+Route::get('/posts/{id}',[ClientController::class,'getPostById'])->name('posts.getpostsbyid');
