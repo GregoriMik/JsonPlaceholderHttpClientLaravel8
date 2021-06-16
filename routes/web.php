@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('/posts',[ClientController::class,'getAllPost'])->name('posts.getAllpost');
 
 Route::get('/posts/{id}',[ClientController::class,'getPostById'])->name('posts.getpostsbyid');
+
+Route::get('/add-post',[ClientController::class,'addPost'])->name('posts.addpost');
