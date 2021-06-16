@@ -23,3 +23,7 @@ Route::get('/posts',[ClientController::class,'getAllPost'])->name('posts.getAllp
 Route::get('/posts/{id}',[ClientController::class,'getPostById'])->name('posts.getpostsbyid');
 
 Route::get('/add-post',[ClientController::class,'addPost'])->name('posts.addpost');
+
+Route::get('/update-post',[ClientController::class,'updatePost'])->name('posts.addpost');
+
+Route::get('/delete-post/{id}',[ClientController::class,'deletePost'])->name('posts.deletepost');
